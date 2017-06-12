@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   	get 'login' => :new, :as => :login
   	post 'login' => :create, :as => :authenticate
   	get 'auth/shopify/callback'=> :callback
-  	get 'logout' => destroy , :as => :logout
+  	get 'logout' => :destroy , :as => :logout
   end 
   root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'

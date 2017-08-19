@@ -26,6 +26,7 @@
 
 7. Delete favicon.ico
 	+ In app/views/home/index => delete the line  Icon:....'favicon.ico'(Don't know why heroku can not redirect if you have this line) 
+	+ If you want your app not to run in embedded app on shopify go to: app/views/layouts/embedded_app.html.erb change forceRedirect: true => forceRedirect: false
 
 8. Change version of the database 
 	+ In db/migrate/...._create_shops.rb => change this line CreateShops < ActiveRecord::Migration into CreateShops < ActiveRecord::Migration[5.0] 
